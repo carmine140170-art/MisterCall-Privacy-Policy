@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#4c1d95">
+<meta name="description" content="Manuale ufficiale MisterCall: prima configurazione, protezione e funzioni principali.">
+<title>Manuale MisterCall — Guida ufficiale</title>
+<style>
+:root{--purple:#4c1d95;--violet:#6d28d9;--ink:#202033;--muted:#687084;--line:#e7e5ef;--paper:#fff;--wash:#f7f6fb;--bluewash:#eff6ff;--goldwash:#fff7ed;--shadow:0 18px 48px rgba(35,20,70,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--wash);color:var(--ink);font:16px/1.7 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--violet)}.topbar{height:5px;background:linear-gradient(90deg,#4c1d95,#8b5cf6,#2563eb)}
+header{background:radial-gradient(circle at 85% 10%,rgba(167,139,250,.35),transparent 28%),linear-gradient(125deg,#35116f,#5b21b6 58%,#6d28d9);color:white;padding:24px max(24px,calc((100% - 1180px)/2)) 58px}
+.brand{display:flex;align-items:center;gap:14px;font-size:.82rem;letter-spacing:.16em;font-weight:800;text-transform:uppercase;color:#ede9fe}.brand img{width:54px;height:54px;object-fit:cover;border-radius:16px;box-shadow:0 6px 20px #1f0a4c66}
+.hero{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(200px,.6fr);gap:44px;align-items:center;max-width:1180px;margin:34px auto 0}.eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.19em;text-transform:uppercase;color:#ddd6fe}.hero h1{font-size:clamp(2.5rem,5vw,4.5rem);line-height:1.04;letter-spacing:-.045em;margin:12px 0 18px}.hero p{font-size:1.15rem;max-width:660px;color:#f3eefe;margin:0}.hero-logo{justify-self:center;width:min(250px,100%);aspect-ratio:1;object-fit:cover;border-radius:34px;box-shadow:0 25px 70px #1f0a4c66;border:1px solid #ffffff40}
+.wrap{max-width:1180px;margin:-24px auto 0;padding:0 22px 60px;display:grid;grid-template-columns:245px minmax(0,1fr);gap:28px;align-items:start}
+nav{position:sticky;top:20px;background:white;border:1px solid var(--line);border-radius:20px;padding:18px 14px;box-shadow:var(--shadow)}nav .navtitle{font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);font-weight:800;padding:0 10px 10px}nav a{display:block;padding:9px 10px;border-radius:10px;text-decoration:none;color:#4b4860;font-size:.9rem;line-height:1.35}nav a:hover{background:#f2edff;color:var(--purple)}main{min-width:0}.intro,.section{background:white;border:1px solid var(--line);border-radius:22px;padding:clamp(22px,4vw,42px);box-shadow:var(--shadow);margin-bottom:22px}
+.pill{display:inline-flex;background:#f2edff;color:var(--purple);padding:5px 12px;border-radius:999px;font-size:.77rem;font-weight:800;letter-spacing:.02em}.intro h2,.section h2{font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.2;letter-spacing:-.025em;margin:12px 0}.intro p{color:#4f5263;font-size:1.05rem}
+.notice{background:var(--bluewash);border-left:4px solid #3b82f6;border-radius:12px;padding:17px 19px;margin-top:22px}.notice strong{display:block;margin-bottom:3px;color:#1e3a8a}.notice.warning{background:var(--goldwash);border-left-color:#f59e0b}.notice.warning strong{color:#9a3412}
+.section-head{display:flex;gap:14px;align-items:flex-start;margin-bottom:24px}.num{flex:0 0 42px;height:42px;display:grid;place-items:center;border-radius:14px;background:#f2edff;color:var(--purple);font-weight:900}.section-head p{margin:7px 0 0;color:var(--muted)}.section h2{margin:0}
+.step-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,.8fr);gap:28px;align-items:center}.step-grid p{margin-top:0}.photo{margin:0;padding:10px;background:#f7f7fb;border:1px solid var(--line);border-radius:18px;max-width:100%;text-align:center}.photo img{display:block;width:100%;max-height:590px;object-fit:contain;border-radius:10px}.photo figcaption{font-size:.8rem;color:var(--muted);padding:8px 4px 2px}
+.action{background:#f8f7fc;border:1px solid #ece8f5;border-radius:14px;padding:14px 16px;margin-top:18px}.action b{display:block;color:var(--purple);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:20px}.level{padding:20px;border:1px solid var(--line);border-radius:16px;background:#fff}.level h3{margin:0 0 8px;font-size:1.1rem}.level p{margin:0;color:#5e6274;font-size:.95rem}.level.base{background:#f0f7ff;border-color:#bfdbfe}.level.max{background:var(--goldwash);border-color:#fed7aa}
+.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.option{border:1px solid var(--line);border-radius:16px;padding:19px;background:#fff}.option h3{margin:0 0 7px}.option p{margin:0;color:#5e6274}
+details{border:1px solid var(--line);border-radius:14px;padding:15px 18px;margin:12px 0;background:#fff}summary{cursor:pointer;font-weight:750}details p,details ul{color:#555a6d;margin-bottom:2px}
+footer{text-align:center;color:var(--muted);padding:24px 20px 40px;font-size:.86rem}footer strong{color:var(--purple)}
+@media(max-width:850px){.hero{grid-template-columns:1fr;gap:24px}.hero-logo{width:150px;justify-self:start}.wrap{grid-template-columns:1fr;margin-top:-18px}nav{position:static;display:block}nav .links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.step-grid{grid-template-columns:1fr}.photo{max-width:540px;margin:auto}.cards{grid-template-columns:1fr}.options{grid-template-columns:1fr}}
+@media(max-width:480px){header{padding:18px 20px 48px}.hero{margin-top:28px}.hero h1{font-size:2.55rem}.wrap{padding:0 12px 40px;gap:14px}.intro,.section{border-radius:17px;padding:22px 18px}nav .links{grid-template-columns:1fr}.brand img{width:46px;height:46px}}
+</style>
+</head>
+<body>
+<div class="topbar"></div>
+<header>
+  <div class="brand"><img src="assets/logo-mistercall.jpg" alt="Logo MisterCall"><span>Guida ufficiale · Manuale utente</span></div>
+  <div class="hero">
+    <div><div class="eyebrow">Protezione dalle chiamate indesiderate</div><h1>Manuale di<br>MisterCall</h1><p>Una guida semplice e ordinata per completare la prima configurazione e conoscere le funzioni principali dell’app Android.</p></div>
+    <img class="hero-logo" src="assets/logo-mistercall.jpg" alt="MisterCall, icona dell’app">
+  </div>
+</header>
+<div class="wrap">
+<nav aria-label="Indice del manuale">
+  <div class="navtitle">Indice della guida</div>
+  <div class="links">
+    <a href="#benvenuto">Benvenuto</a>
+    <a href="#panoramica">Prima configurazione</a>
+    <a href="#notifiche">1 · Notifiche</a>
+    <a href="#contatti">2 · Contatti</a>
+    <a href="#telefono">3 · Telefono e chiamate</a>
+    <a href="#sospensione">4 · Sospensione app</a>
+    <a href="#callerid">5 · ID chiamante e spam</a>
+    <a href="#livelli">Livelli di protezione</a>
+    <a href="#opzioni">Opzioni aggiuntive</a>
+    <a href="#bloccati">Numeri bloccati</a>
+    <a href="#max">MAX Premium</a>
+    <a href="#assistenza">Problemi frequenti</a>
+  </div>
+</nav>
+<main>
+<section class="intro" id="benvenuto">
+  <span class="pill">Guida utente</span><h2>Benvenuto in MisterCall</h2>
+  <p>MisterCall è un’app pensata per aiutarti a proteggerti dalle chiamate indesiderate, come quelle provenienti da call center e numeri riconosciuti come spam.</p>
+  <p>Questa guida accompagna passo dopo passo nella configurazione iniziale e nell’utilizzo delle funzioni disponibili.</p>
+  <div class="notice"><strong>Prima di iniziare</strong>Installa MisterCall da Google Play. Una volta installata, apri l’app e premi <b>ATTIVA MISTERCALL</b> per avviare la procedura guidata. Non è necessario spiegare qui come installarla.</div>
+</section>
+<section class="section" id="panoramica">
+  <div class="section-head"><span class="num">✓</span><div><h2>Prima configurazione</h2><p>Completa i passaggi nell’ordine mostrato dalla procedura guidata.</p></div></div>
+  <ol><li>Consenti le notifiche.</li><li>Consenti l’accesso ai contatti.</li><li>Consenti l’accesso al telefono e alle chiamate.</li><li>Disattiva la sospensione dell’attività se l’app è inutilizzata.</li><li>Scegli MisterCall per ID chiamante e spam.</li></ol>
+</section>
+<section class="section" id="notifiche">
+  <div class="section-head"><span class="num">1</span><div><h2>Consenti le notifiche</h2><p>La richiesta viene mostrata da Android durante la configurazione.</p></div></div>
+  <div class="step-grid"><div><p>Quando Android mostra la richiesta, tocca <b>CONSENTI</b>. Le notifiche permettono a MisterCall di mostrarti le comunicazioni previste dall’app.</p><div class="action"><b>Cosa fare</b>Premi <strong>CONSENTI</strong> nella finestra di Android.</div></div><figure class="photo"><img src="assets/consenti-notifiche.jpg" alt="Schermata Android per consentire le notifiche a MisterCall"><figcaption>Richiesta di autorizzazione alle notifiche</figcaption></figure></div>
+</section>
+<section class="section" id="contatti">
+  <div class="section-head"><span class="num">2</span><div><h2>Consenti l’accesso ai contatti</h2><p>Concedi il permesso quando compare la richiesta.</p></div></div>
+  <div class="step-grid"><div><p>Quando compare la richiesta relativa ai contatti, tocca <b>CONSENTI</b>. Questo permesso consente a MisterCall di utilizzare l’accesso ai contatti previsto dalle sue funzioni.</p><div class="action"><b>Cosa fare</b>Premi <strong>CONSENTI</strong> nella finestra di Android.</div></div><figure class="photo"><img src="assets/consenti-contatti.jpg" alt="Schermata Android per consentire l’accesso ai contatti"><figcaption>Richiesta di accesso ai contatti</figcaption></figure></div>
+</section>
+<section class="section" id="telefono">
+  <div class="section-head"><span class="num">3</span><div><h2>Consenti telefono e chiamate</h2><p>Autorizzazione necessaria per le funzioni di gestione delle chiamate.</p></div></div>
+  <div class="step-grid"><div><p>Quando Android mostra la richiesta relativa al telefono o alle chiamate, tocca <b>CONSENTI</b>. Questa autorizzazione è necessaria per le funzioni di gestione delle chiamate previste dall’app.</p><div class="action"><b>Cosa fare</b>Premi <strong>CONSENTI</strong> nella finestra di Android.</div></div><figure class="photo"><img src="assets/consenti-telefono.jpg" alt="Schermata Android per consentire a MisterCall di effettuare e gestire telefonate"><figcaption>Richiesta di autorizzazione per le telefonate</figcaption></figure></div>
+</section>
+<section class="section" id="sospensione">
+  <div class="section-head"><span class="num">4</span><div><h2>Disattiva la sospensione dell’app</h2><p>Questo passaggio viene aperto automaticamente da MisterCall.</p></div></div>
+  <div class="step-grid"><div><p>Dopo aver concesso le autorizzazioni precedenti, MisterCall apre automaticamente questa schermata Android. <b>Non devi cercarla manualmente nelle Impostazioni.</b></p><div class="action"><b>Cosa fare</b>Disattiva l’interruttore <strong>“Sospendi l’attività dell’app se inutilizzata”</strong>.</div></div><figure class="photo"><img src="assets/sospensione-app.jpg" alt="Informazioni app Android con l'opzione Sospendi l'attività dell'app se inutilizzata"><figcaption>Disattivazione della sospensione automatica</figcaption></figure></div>
+</section>
+<section class="section" id="callerid">
+  <div class="section-head"><span class="num">5</span><div><h2>Imposta MisterCall per ID chiamante e spam</h2><p>Ultimo passaggio della configurazione iniziale.</p></div></div>
+  <div class="step-grid"><div><p>Dopo le autorizzazioni, Android chiede quale app usare per ID chiamante e spam. Seleziona <b>MisterCall</b> e premi <b>IMPOSTA PREDEFINITO</b>, se richiesto.</p><div class="notice warning"><strong>Attenzione</strong>Questa impostazione non sostituisce l’app con cui componi i numeri ed effettui le chiamate.</div></div><figure class="photo"><img src="assets/id-chiamante-spam.jpg" alt="Schermata Android per impostare MisterCall come app ID chiamante e spam"><figcaption>Seleziona MisterCall e conferma</figcaption></figure></div>
+</section>
+<section class="section" id="livelli">
+  <div class="section-head"><span class="num">A</span><div><h2>Scegliere il livello di protezione</h2><p>Il livello selezionato determina il comportamento della protezione.</p></div></div>
+  <div class="cards">
+    <article class="level"><h3>OFF</h3><p>Protezione disattivata. MisterCall non applica il blocco tramite il livello di protezione.</p></article>
+    <article class="level base"><h3>BASE · Gratuito</h3><p>Livello gratuito previsto per la versione iniziale, con i controlli antispam disponibili.</p></article>
+    <article class="level max"><h3>MAX · Premium</h3><p>Livello Premium previsto per il futuro. Al momento l’abbonamento non è disponibile.</p></article>
+  </div>
+  
+</section>
+<section class="section" id="opzioni">
+  <div class="section-head"><span class="num">+</span><div><h2>Opzioni aggiuntive</h2><p>Attiva queste opzioni solo se corrispondono alle tue esigenze.</p></div></div>
+  <div class="options">
+    <article class="option"><h3>Blocca numeri nascosti</h3><p>Riguarda le chiamate che non mostrano il numero del chiamante. Attivala solo se desideri bloccare anche questo tipo di chiamate.</p></article>
+    <article class="option"><h3>Blocca numeri stranieri</h3><p>Può bloccare chiamate provenienti da numeri esteri, comprese chiamate legittime.</p></article>
+  </div>
+  <p>Le opzioni possono essere disabilitate quando il livello di protezione selezionato non ne consente l’utilizzo.</p>
+</section>
+<section class="section" id="bloccati">
+  <div class="section-head"><span class="num">≡</span><div><h2>Consultare i numeri bloccati</h2><p>Consulta le chiamate bloccate e registrate nell’app.</p></div></div>
+  <p>Apri la sezione <b>Numeri bloccati</b> per consultare il registro.</p>
+  <div class="notice"><strong>Da sapere</strong>Il registro mostra i 10 numeri più recenti, quindi potrebbe non includere le chiamate più vecchie.</div>
+</section>
+<section class="section" id="max">
+  <div class="section-head"><span class="num">★</span><div><h2>Livello MAX Premium</h2><p>La funzione Premium non è ancora disponibile.</p></div></div>
+  <p>MAX è previsto come funzione Premium. Nella versione attuale l’abbonamento non è ancora disponibile.</p>
+  <div class="notice">Se compare un messaggio che informa che la funzione sarà disponibile in futuro, seleziona <b>BASE</b> per utilizzare la protezione gratuita.</div>
+</section>
+<section class="section" id="assistenza">
+  <div class="section-head"><span class="num">?</span><div><h2>Problemi frequenti</h2><p>Controlli semplici prima di chiedere assistenza.</p></div></div>
+  <details open><summary>MisterCall non blocca una chiamata</summary><ul><li>Verifica che sia selezionato BASE e non OFF.</li><li>Completa la configurazione iniziale.</li><li>Controlla l’impostazione ID chiamante e spam.</li><li>Non tutte le chiamate vengono necessariamente riconosciute.</li></ul></details>
+  <details><summary>Hai negato un permesso</summary><p>Apri le Impostazioni Android, seleziona <b>App &gt; MisterCall</b> e controlla le autorizzazioni disponibili.</p></details>
+  <details><summary>Devi contattare l’assistenza</summary><p>Quando chiedi assistenza, indica il modello del telefono, la versione Android e il messaggio visualizzato.</p></details>
+</section>
+<section class="intro">
+  <span class="pill">Configurazione completata</span><h2>Ora sei pronto a usare MisterCall</h2>
+  <p>Puoi tornare all’app e utilizzare le funzioni disponibili nel livello di protezione scelto.</p>
+  
+</section>
+</main>
+</div>
+<footer><strong>MisterCall</strong> · Manuale utente · Guida alla prima configurazione e alle funzioni principali</footer>
+</body>
+</html>

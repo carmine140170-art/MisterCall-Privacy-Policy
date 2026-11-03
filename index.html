@@ -13,7 +13,7 @@ h1{line-height:1.2} h2{margin-top:32px} a{color:#1565c0}
 <body>
 
 <h1>Privacy Policy di MisterCall</h1>
-<p class="updated"><strong>Ultimo aggiornamento: 24 ottobre 2026</strong></p>
+<p class="updated"><strong>Ultimo aggiornamento: 3 novembre 2026</strong></p>
 
 <p>La presente Privacy Policy descrive il modo in cui l'applicazione <strong>MisterCall</strong> (“MisterCall”, “l'app” o “noi”) tratta i dati durante il suo utilizzo.</p>
 
@@ -41,9 +41,11 @@ h1{line-height:1.2} h2{margin-top:32px} a{color:#1565c0}
 <p>Quando l'utente concede il relativo permesso e attiva una funzione che lo richiede, MisterCall può verificare localmente se un determinato numero di telefono è presente nella rubrica del dispositivo.</p>
 <p>La rubrica viene utilizzata per effettuare tale verifica. MisterCall non necessita di caricare o sincronizzare l'intera rubrica dell'utente con i propri server.</p>
 
-<h3>Registro delle chiamate</h3>
-<p>MisterCall può richiedere l'accesso al registro delle chiamate del dispositivo per consentire all'utente di scegliere un numero dal quale desidera bloccare successivamente le chiamate.</p>
-<p>Questa funzione viene utilizzata esclusivamente per permettere all'utente di selezionare numeri presenti tra le chiamate recenti.</p>
+<h3>Numeri inseriti, incollati o condivisi dall'utente</h3>
+<p>Nella nuova versione senza accesso diretto al registro, MisterCall riceve soltanto il contenuto che l'utente decide di condividere da un'altra app, selezionare tramite un'azione sul testo o incollare nel campo del numero. Il contenuto condiviso può comprendere testo o una scheda contatto (vCard). Viene elaborato localmente per individuare i numeri da proporre; l'aggiunta alla lista Bloccati richiede una conferma esplicita.</p>
+<p>Questa operazione non consulta il registro né la rubrica e non invia il contenuto condiviso ai servizi pubblicitari o a CallFilter. Il successivo controllo antispam delle chiamate rimane disciplinato dalla sezione 5. L'apertura dell'app Telefono non autorizza MisterCall a leggerne il registro. I numeri confermati sono conservati nelle liste locali; il contenuto ricevuto non viene archiviato come documento nell'app.</p>
+<h3>Registro delle chiamate nelle versioni precedenti</h3>
+<p>Le versioni precedenti che includono “SCEGLI DALLE CHIAMATE” possono richiedere READ_CALL_LOG per selezionare localmente un numero dalle chiamate recenti e aggiungerlo ai Bloccati. Questo accesso è stato rimosso dalla nuova versione, in preparazione alla data di aggiornamento della presente informativa. Fino all'aggiornamento dell'app, il comportamento dipende dalla versione installata.</p>
 
 <h3>Dati e impostazioni salvati sul dispositivo</h3>
 <p>MisterCall salva localmente sul dispositivo alcune informazioni necessarie al funzionamento dell'app, tra cui, a seconda delle funzioni utilizzate:</p>
@@ -71,7 +73,7 @@ h1{line-height:1.2} h2{margin-top:32px} a{color:#1565c0}
 <p>Il permesso <code>READ_CONTACTS</code> viene utilizzato quando necessario per verificare se il numero di una chiamata è presente nella rubrica dell'utente.</p>
 
 <h3>Accesso al registro delle chiamate</h3>
-<p>Il permesso <code>READ_CALL_LOG</code> viene utilizzato per la funzione che consente all'utente di scegliere un numero direttamente dalle chiamate recenti e aggiungerlo ai numeri da bloccare.</p>
+<p>La nuova versione senza accesso diretto al registro non richiede <code>READ_CALL_LOG</code>. Nelle versioni precedenti che lo includono, il permesso viene richiesto quando l'utente sceglie la funzione di selezione dalle chiamate recenti. La condivisione nella nuova versione utilizza soltanto i dati forniti dall'utente e, per eventuali file condivisi compatibili, un accesso temporaneo di sola lettura al contenuto selezionato.</p>
 
 <h3>Notifiche</h3>
 <p>Il permesso relativo alle notifiche può essere utilizzato per mostrare all'utente le notifiche e le richieste di feedback relative alle chiamate gestite da MisterCall.</p>

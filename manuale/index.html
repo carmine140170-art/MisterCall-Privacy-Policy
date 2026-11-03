@@ -62,7 +62,7 @@ footer{text-align:center;color:var(--muted);padding:24px 20px 40px;font-size:.86
 <section class="intro" id="benvenuto">
   <span class="pill">Guida utente</span><h2>Benvenuto in MisterCall</h2>
   <p>MisterCall è un’app pensata per aiutarti a proteggerti dalle chiamate indesiderate, come quelle provenienti da call center e numeri riconosciuti come spam.</p>
-  <p>Questa guida accompagna passo dopo passo nella configurazione iniziale e nell’utilizzo delle funzioni disponibili.</p>
+  <p>Questa guida accompagna passo dopo passo nella configurazione iniziale e nell’utilizzo delle funzioni disponibili.</p><p><b>Aggiornamento del 3 novembre 2026:</b> le indicazioni sulla condivisione senza accesso al registro riguardano la nuova release in preparazione, non ancora pubblicata alla data di aggiornamento. Alcune funzioni differiscono nella versione 1.0.4 attualmente distribuita ai tester.</p>
   <div class="notice"><strong>Prima di iniziare</strong>Installa MisterCall da Google Play. Una volta installata, apri l’app e premi <b>ATTIVA MISTERCALL</b> per avviare la procedura guidata. Al termine della configurazione, BASE si attiva quando tutti i requisiti richiesti sono soddisfatti. Se manca un requisito, segui l’avviso mostrato dall’app.</div>
 </section>
 <section class="section" id="panoramica">
@@ -109,14 +109,17 @@ footer{text-align:center;color:var(--muted);padding:24px 20px 40px;font-size:.86
 <section class="section" id="bloccati">
   <div class="section-head"><span class="num">≡</span><div><h2>Consultare i numeri bloccati</h2><p>Consulta le chiamate bloccate e registrate nell’app.</p></div></div>
   <p>Apri <b>Numeri bloccati</b> dalla Home per vedere un unico elenco dei numeri inseriti manualmente e di quelli registrati dai blocchi automatici. Le voci con data sono ordinate dalla più recente. Le voci storiche prive di data possono non mostrarla.</p>
-<p>Puoi aggiungere un numero manualmente o sceglierlo dal registro chiamate. Con <b>SBLOCCA</b> lo rimuovi dai Bloccati e lo aggiungi ai Sicuri.</p>
-<div class="notice"><strong>Il limite di 10 numeri</strong>Riguarda soltanto la selezione dei numeri recenti tramite “Aggiungi da registro”, non la capacità della lista Numeri bloccati.</div>
+<p>Puoi digitare o incollare un numero. Nella nuova versione senza accesso diretto al registro puoi anche usare <b>Apri registro chiamate</b>: nell'app Telefono apri Recenti e condividi il numero con MisterCall, oppure copialo e torna nell'app per incollarlo.</p>
+<ol><li>Nell'app Telefono seleziona una chiamata e scegli <b>Condividi</b>, se disponibile.</li><li>Scegli <b>MisterCall</b> (la voce può essere “Blocca con MisterCall”).</li><li>Controlla il numero proposto, selezionalo se ne sono presenti diversi e premi <b>CONFERMA BLOCCO</b>.</li></ol>
+<p>Aprire la schermata non blocca automaticamente il numero: <b>CHIUDI</b> o Indietro annullano l'operazione. La condivisione e il menu di selezione del testo dipendono dall'app utilizzata; se non sono supportati, usa copia/incolla o l'inserimento manuale. MisterCall non legge direttamente il registro. Se il numero è nei Sicuri, viene mostrato un avviso prima del suo spostamento nei Bloccati. I contatti riconosciuti in rubrica mantengono la precedenza sui blocchi.</p>
+<p>Con <b>SBLOCCA</b> rimuovi un numero dai Bloccati e lo aggiungi ai Sicuri.</p>
+<div class="notice"><strong>Versioni precedenti</strong>La funzione “SCEGLI DALLE CHIAMATE”, con fino a 10 numeri recenti e permesso Registro chiamate, appartiene alle versioni precedenti. Nella nuova versione è sostituita dalla condivisione o dall'inserimento manuale; non esiste un limite di 10 elementi per la lista Bloccati.</div>
 </section>
 <section class="section" id="sicuri">
 <div class="section-head"><span class="num">✓</span><div><h2>Numeri sicuri</h2><p>Gestisci le scelte personali sui numeri.</p></div></div>
 <p>Apri <b>Numeri sicuri</b> dalla Home. Non è previsto l’inserimento manuale in questa schermata: un numero entra nei Sicuri quando lo sblocchi dai Bloccati o quando rispondi NO alla domanda sulla chiamata indesiderata.</p>
 <p>Con <b>BLOCCA</b> lo rimuovi dai Sicuri e lo aggiungi ai Bloccati. I contatti in rubrica vengono riconosciuti separatamente e non vengono aggiunti automaticamente a questa lista.</p>
-<div class="notice"><strong>Filtri generali</strong>La lista Sicuri non sostituisce la rubrica e non annulla necessariamente tutti i filtri: ad esempio, il filtro per i numeri stranieri viene valutato prima della lista Sicuri.</div>
+<div class="notice"><strong>Filtri generali</strong>Nella nuova versione, i numeri nei Sicuri hanno precedenza sui filtri successivi, incluso quello per i numeri stranieri. Nella versione 1.0.4 il filtro stranieri può invece essere valutato prima dei Sicuri. La rubrica viene riconosciuta separatamente.</div>
 </section>
 <section class="section" id="notifiche-app">
 <div class="section-head"><span class="num">N</span><div><h2>Notifiche e domanda dopo la chiamata</h2><p>Le impostazioni delle notifiche sono disponibili in BASE.</p></div></div>
@@ -126,7 +129,7 @@ footer{text-align:center;color:var(--muted);padding:24px 20px 40px;font-size:.86
 </section>
 <section class="section" id="pubblicita">
 <div class="section-head"><span class="num">P</span><div><h2>Pubblicità e preferenze privacy</h2><p>Il consenso pubblicitario è separato dai permessi Android.</p></div></div>
-<p>BASE prevede banner nella Home, in Avanzate e nella schermata di valutazione aperta dalla notifica dopo una chiamata. I banner hanno uno spazio dedicato, separato dai pulsanti.</p>
+<p>La nuova versione BASE prevede banner nella Home, in Avanzate, in Numeri sicuri, in Numeri bloccati e nella schermata di valutazione aperta dalla notifica dopo una chiamata. I banner hanno uno spazio dedicato, separato dai pulsanti.</p>
 <p>Quando richiesto, il modulo Google permette di scegliere le preferenze sul trattamento dei dati pubblicitari. La protezione telefonica non dipende dall’accettazione del consenso pubblicitario. In base alle scelte e alla disponibilità, possono comparire annunci limitati oppure nessun annuncio.</p>
 <p>Per rivedere le scelte, apri <b>Avanzate → Privacy pubblicità</b>, quando la voce è disponibile. In assenza di rete i banner possono non caricarsi; il controllo antispam esterno richiede invece una connessione.</p>
 <p>Consulta l’<a href="../">informativa privacy</a> per i dettagli sui dati trattati, sui servizi esterni e sulle richieste inviate dal modulo Contatti.</p>
@@ -149,6 +152,6 @@ footer{text-align:center;color:var(--muted);padding:24px 20px 40px;font-size:.86
 </section>
 </main>
 </div>
-<footer><strong>MisterCall</strong> · Manuale utente · Versione BASE 1.0.4 · Aggiornato il 25 ottobre 2026</footer>
+<footer><strong>MisterCall</strong> · Manuale utente · BASE · Guida aggiornata per la prossima release senza accesso al registro · 3 novembre 2026</footer>
 </body>
 </html>

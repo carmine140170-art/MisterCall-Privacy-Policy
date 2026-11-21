@@ -13,7 +13,7 @@ h1{line-height:1.2} h2{margin-top:32px} a{color:#1565c0}
 <body>
 
 <h1>Privacy Policy di MisterCall</h1>
-<p class="updated"><strong>Ultimo aggiornamento: 3 novembre 2026</strong></p>
+<p class="updated"><strong>Ultimo aggiornamento: 21 novembre 2026</strong></p>
 
 <p>La presente Privacy Policy descrive il modo in cui l'applicazione <strong>MisterCall</strong> (“MisterCall”, “l'app” o “noi”) tratta i dati durante il suo utilizzo.</p>
 
@@ -36,6 +36,10 @@ h1{line-height:1.2} h2{margin-top:32px} a{color:#1565c0}
 <li>consentire all'utente di decidere se classificare il numero come indesiderato o desiderato.</li>
 </ul>
 <p>Il numero telefonico viene trattato esclusivamente nella misura necessaria al funzionamento delle funzioni di protezione dalle chiamate indesiderate.</p>
+
+<h3>Livello di protezione e attestazione</h3>
+<p>Per le richieste di controllo antispam online, MisterCall invia al proprio Worker il livello di protezione attivo (BASE o MAX), che determina quali servizi possono essere consultati.</p>
+<p>Firebase App Check utilizza Google Play Integrity per verificare l'integrità dell'app e del dispositivo. Il materiale di attestazione viene trattato dai servizi Google coinvolti. Il token App Check risultante viene inviato al Worker insieme alla richiesta antispam per consentirne la verifica e proteggere il servizio da richieste non autorizzate.</p>
 
 <h3>Contatti della rubrica</h3>
 <p>Quando l'utente concede il relativo permesso e attiva una funzione che lo richiede, MisterCall può verificare localmente se un determinato numero di telefono è presente nella rubrica del dispositivo.</p>
@@ -93,12 +97,11 @@ h1{line-height:1.2} h2{margin-top:32px} a{color:#1565c0}
 </ul>
 <p>MisterCall non utilizza questi dati per finalità pubblicitarie o di profilazione dell'utente.</p>
 
-<h2>5. Comunicazione del numero a CallFilter.app</h2>
-<p>Per la funzione di identificazione e classificazione delle chiamate, MisterCall utilizza il servizio <strong>CallFilter.app</strong>.</p>
-<p>Durante il controllo antispam, il numero telefonico della chiamata può essere trasmesso tramite una connessione HTTPS al servizio CallFilter.app, allo scopo di verificarlo rispetto al relativo database di numeri indesiderati.</p>
-<p>Secondo la Privacy Policy pubblicata da CallFilter.app, il servizio dichiara di non richiedere, raccogliere o conservare dati personali dell'utente e di non raccogliere o conservare identificativi del dispositivo quali numero SIM, IMEI o indirizzo MAC.</p>
-<p>MisterCall non trasmette a CallFilter.app l'intera rubrica dell'utente.</p>
-<p>Per maggiori informazioni è possibile consultare la <a href="https://callfilter.app/privacy-policy/it">Privacy Policy ufficiale di CallFilter.app</a>.</p>
+<h2>5. Controllo antispam online e servizi utilizzati</h2>
+<p>A partire da MisterCall 1.0.6 (build 12), quando è necessario un controllo online, l’app invia via HTTPS il numero della chiamata, il livello di protezione e il token Firebase App Check a un servizio di MisterCall ospitato su <strong>Cloudflare Workers</strong>. Il Worker verifica il token prima di effettuare la ricerca antispam.</p>
+<p>Per la verifica della reputazione del numero, il Worker può trasmetterlo a <strong>CallFilter.app</strong>. Con la protezione <strong>MAX</strong>, se CallFilter non classifica la chiamata come da bloccare, il Worker può interrogare anche <strong>CallerAPI</strong> con il numero in formato internazionale.</p>
+<p>La verifica della presenza del numero nella rubrica avviene sul dispositivo. La richiesta antispam non include i nomi dei contatti, l'intera rubrica o il contenuto della conversazione.</p>
+<p>Per maggiori informazioni, consulta le informative di <a href="https://callfilter.app/privacy-policy/it">CallFilter.app</a> e <a href="https://firebase.google.com/support/privacy">Firebase</a>.</p>
 
 <h2>6. Dati delle chiamate e contenuto delle conversazioni</h2>
 <p>MisterCall utilizza le informazioni necessarie alla gestione e allo screening delle chiamate telefoniche.</p>
@@ -118,6 +121,8 @@ h1{line-height:1.2} h2{margin-top:32px} a{color:#1565c0}
 <p>Il titolare cancellerà le richieste di assistenza riferibili all'indirizzo indicato dal Foglio Google e dalla casella di posta, comprese le eventuali risposte: nome, email, messaggio, versione Android, data e ora e stato della richiesta. Per queste copie non è previsto un ulteriore periodo di conservazione dopo l'esecuzione della cancellazione. In assenza di una richiesta di cancellazione, il periodo ordinario è di 12 mesi dalla chiusura della richiesta di assistenza.</p>
 <p>Questa procedura riguarda i dati di assistenza conservati dal titolare. Le liste e le impostazioni locali si eliminano dall'app o dalle impostazioni Android; per i dati già trattati autonomamente dai servizi esterni si vedano le sezioni 5 e 10 e le rispettive informative.</p>
 
+<p>Per il nuovo flusso antispam online, il Worker restituisce il risultato con l’indicazione di non conservarlo in cache. Per i dati trattati dai servizi esterni si applicano le rispettive condizioni e informative.</p>
+
 <h2>8. Sicurezza</h2>
 <p>MisterCall adotta misure tecniche ragionevoli per proteggere i dati trattati dall'app.</p>
 <p>Le comunicazioni con i servizi esterni utilizzati per il controllo dei numeri vengono effettuate tramite connessioni HTTPS.</p>
@@ -127,7 +132,7 @@ h1{line-height:1.2} h2{margin-top:32px} a{color:#1565c0}
 <h2>9. Condivisione dei dati</h2>
 <p>MisterCall non vende i dati personali degli utenti.</p>
 <p>MisterCall non condivide la rubrica dell'utente con inserzionisti o società di marketing.</p>
-<p>Il numero telefonico può essere trasmesso a servizi esterni, come CallFilter.app, quando ciò è necessario per fornire la funzione di identificazione e classificazione delle chiamate.</p>
+<p>Per il controllo antispam online, il numero della chiamata può essere trattato tramite Cloudflare Workers e trasmesso a CallFilter.app e, in MAX, a CallerAPI secondo il flusso descritto nella sezione 5. Firebase App Check e Google Play Integrity sono utilizzati per l’attestazione e la protezione dell’accesso al Worker.</p>
 <p>Nelle versioni con pubblicità, i dati tecnici e pubblicitari possono essere comunicati a Google e ai fornitori indicati nel messaggio di consenso, secondo quanto descritto nella sezione 10. Eventuali altre comunicazioni possono avvenire quando richieste dalla legge o necessarie per tutelare i diritti e la sicurezza del servizio e degli utenti.</p>
 
 <p>Per l'assistenza, i dati del modulo Contatti vengono trattati attraverso Google Apps Script, Fogli Google e Gmail, utilizzati per ricevere, archiviare e gestire le richieste. Le modalità di trattamento da parte di Google e gli eventuali trasferimenti internazionali sono descritti nell'<a href="https://policies.google.com/privacy?hl=it">informativa sulla privacy di Google</a>.</p>

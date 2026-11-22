@@ -49,12 +49,17 @@ footer{text-align:center;color:var(--muted);padding:24px 20px 40px;font-size:.86
     <a href="#sospensione">4 · Sospensione app</a>
     <a href="#callerid">5 · ID chiamante e spam</a>
     <a href="#livelli">Livelli di protezione</a>
-    <a href="#opzioni">Opzioni aggiuntive</a>
+    <a href="#opzioni">Filtri e controllo antispam</a>
+    <a href="#orari">Silenziamento e contatti</a>
     <a href="#bloccati">Numeri bloccati</a>
     <a href="#sicuri">Numeri sicuri</a>
     <a href="#notifiche-app">Notifiche e feedback</a>
     <a href="#pubblicita">Pubblicità e privacy</a>
-    <a href="#max">MAX Premium</a>
+    <a href="#max">MAX e abbonamento</a>
+    <a href="#gestione">Gestione chiamate</a>
+    <a href="#dualsim">Dual SIM</a>
+    <a href="#filtri">Filtri numerici</a>
+    <a href="#backup">Backup e ripristino</a>
     <a href="#assistenza">Problemi frequenti</a>
   </div>
 </nav>
@@ -62,20 +67,20 @@ footer{text-align:center;color:var(--muted);padding:24px 20px 40px;font-size:.86
 <section class="intro" id="benvenuto">
   <span class="pill">Guida utente</span><h2>Benvenuto in MisterCall</h2>
   <p>MisterCall è un’app pensata per aiutarti a proteggerti dalle chiamate indesiderate, come quelle provenienti da call center e numeri riconosciuti come spam.</p>
-  <p>Questa guida accompagna passo dopo passo nella configurazione iniziale e nell’utilizzo delle funzioni disponibili.</p><p><b>Aggiornamento del 3 novembre 2026:</b> le indicazioni sulla condivisione senza accesso al registro riguardano la nuova release in preparazione, non ancora pubblicata alla data di aggiornamento. Alcune funzioni differiscono nella versione 1.0.4 attualmente distribuita ai tester.</p>
+  <p>Questa guida accompagna passo dopo passo nella configurazione iniziale e nell’utilizzo delle funzioni disponibili.</p><p>Guida per MisterCall <b>1.0.6 (build 12)</b>, disponibile su Google Play. Il filtro automatico richiede Android 10 o successivo e il ruolo <b>ID chiamante e spam</b>.</p>
   <div class="notice"><strong>Prima di iniziare</strong>Installa MisterCall da Google Play. Una volta installata, apri l’app e premi <b>ATTIVA MISTERCALL</b> per avviare la procedura guidata. Al termine della configurazione, BASE si attiva quando tutti i requisiti richiesti sono soddisfatti. Se manca un requisito, segui l’avviso mostrato dall’app.</div>
 </section>
 <section class="section" id="panoramica">
-  <div class="section-head"><span class="num">✓</span><div><h2>Prima configurazione</h2><p>Completa i passaggi nell’ordine mostrato dalla procedura guidata.</p></div></div>
+  <div class="section-head"><span class="num">✓</span><div><h2>Prima configurazione</h2><p>Dalla Home, tocca Attiva MisterCall e segui le richieste di Android. Alcuni passaggi possono essere già completati.</p></div></div>
   <ol><li>Consenti le notifiche.</li><li>Consenti l’accesso ai contatti.</li><li>Consenti l’accesso al telefono e alle chiamate.</li><li>Disattiva la sospensione dell’attività se l’app è inutilizzata.</li><li>Scegli MisterCall per ID chiamante e spam.</li></ol>
 </section>
 <section class="section" id="notifiche">
   <div class="section-head"><span class="num">1</span><div><h2>Consenti le notifiche</h2><p>La richiesta viene mostrata da Android durante la configurazione.</p></div></div>
-  <div class="step-grid"><div><p>Quando Android mostra la richiesta, tocca <b>CONSENTI</b>. Le notifiche permettono a MisterCall di mostrarti le comunicazioni previste dall’app.</p><div class="action"><b>Cosa fare</b>Premi <strong>CONSENTI</strong> nella finestra di Android.</div></div><figure class="photo"><img src="assets/consenti-notifiche.jpg" alt="Schermata Android per consentire le notifiche a MisterCall"><figcaption>Richiesta di autorizzazione alle notifiche</figcaption></figure></div>
+  <div class="step-grid"><div><p>Su Android 13 o successivo, quando compare la richiesta, tocca <b>CONSENTI</b>. Le notifiche permettono a MisterCall di mostrarti le comunicazioni previste dall’app.</p><div class="action"><b>Cosa fare</b>Premi <strong>CONSENTI</strong> nella finestra di Android.</div></div><figure class="photo"><img src="assets/consenti-notifiche.jpg" alt="Schermata Android per consentire le notifiche a MisterCall"><figcaption>Richiesta di autorizzazione alle notifiche</figcaption></figure></div>
 </section>
 <section class="section" id="contatti">
   <div class="section-head"><span class="num">2</span><div><h2>Consenti l’accesso ai contatti</h2><p>Concedi il permesso quando compare la richiesta.</p></div></div>
-  <div class="step-grid"><div><p>Quando compare la richiesta relativa ai contatti, tocca <b>CONSENTI</b>. Questo permesso permette di riconoscere i numeri in rubrica: i contatti riconosciuti vengono consentiti prima di applicare i filtri, anche se esteri o presenti nei Bloccati. Senza il permesso, MisterCall non può riconoscerli. La rubrica non viene inviata al sistema pubblicitario.</p><div class="action"><b>Cosa fare</b>Premi <strong>CONSENTI</strong> nella finestra di Android.</div></div><figure class="photo"><img src="assets/consenti-contatti.jpg" alt="Schermata Android per consentire l’accesso ai contatti"><figcaption>Richiesta di accesso ai contatti</figcaption></figure></div>
+  <div class="step-grid"><div><p>Quando compare la richiesta relativa ai contatti, tocca <b>CONSENTI</b>. Questo permesso permette di riconoscere i numeri in rubrica: i contatti riconosciuti hanno precedenza sui filtri di blocco, anche se esteri o presenti nei Bloccati. Il silenziamento programmato usa le eccezioni che scegli separatamente. Senza il permesso, MisterCall non può riconoscerli. Il riconoscimento della rubrica avviene sul dispositivo.</p><div class="action"><b>Cosa fare</b>Premi <strong>CONSENTI</strong> nella finestra di Android.</div></div><figure class="photo"><img src="assets/consenti-contatti.jpg" alt="Schermata Android per consentire l’accesso ai contatti"><figcaption>Richiesta di accesso ai contatti</figcaption></figure></div>
 </section>
 <section class="section" id="telefono">
   <div class="section-head"><span class="num">3</span><div><h2>Consenti telefono e chiamate</h2><p>Autorizzazione necessaria per le funzioni di gestione delle chiamate.</p></div></div>
@@ -83,7 +88,7 @@ footer{text-align:center;color:var(--muted);padding:24px 20px 40px;font-size:.86
 </section>
 <section class="section" id="sospensione">
   <div class="section-head"><span class="num">4</span><div><h2>Disattiva la sospensione dell’app</h2><p>Questo passaggio viene aperto automaticamente da MisterCall.</p></div></div>
-  <div class="step-grid"><div><p>Dopo aver concesso le autorizzazioni precedenti, MisterCall apre automaticamente questa schermata Android. <b>Non devi cercarla manualmente nelle Impostazioni.</b></p><div class="action"><b>Cosa fare</b>Disattiva l’interruttore <strong>“Sospendi l’attività dell’app se inutilizzata”</strong>.</div></div><figure class="photo"><img src="assets/sospensione-app.jpg" alt="Informazioni app Android con l'opzione Sospendi l'attività dell'app se inutilizzata"><figcaption>Disattivazione della sospensione automatica</figcaption></figure></div>
+  <div class="step-grid"><div><p>Se la sospensione è attiva, MisterCall apre le impostazioni dell’app. Dopo aver disattivato l’opzione, torna a MisterCall per proseguire.</p><div class="action"><b>Cosa fare</b>Disattiva l’interruttore <strong>“Sospendi l’attività dell’app se inutilizzata”</strong>.</div></div><figure class="photo"><img src="assets/sospensione-app.jpg" alt="Informazioni app Android con l'opzione Sospendi l'attività dell'app se inutilizzata"><figcaption>Disattivazione della sospensione automatica</figcaption></figure></div>
 </section>
 <section class="section" id="callerid">
   <div class="section-head"><span class="num">5</span><div><h2>Imposta MisterCall per ID chiamante e spam</h2><p>Ultimo passaggio della configurazione iniziale.</p></div></div>
@@ -93,23 +98,36 @@ footer{text-align:center;color:var(--muted);padding:24px 20px 40px;font-size:.86
   <div class="section-head"><span class="num">A</span><div><h2>Scegliere il livello di protezione</h2><p>Il livello selezionato determina il comportamento della protezione.</p></div></div>
   <div class="cards">
     <article class="level"><h3>OFF</h3><p>Protezione disattivata. MisterCall non applica il blocco tramite il livello di protezione.</p></article>
-    <article class="level base"><h3>BASE · Gratuito</h3><p>Protezione gratuita con filtri locali, controllo antispam CallFilter, liste personali e notifiche configurabili. Include banner pubblicitari.</p></article>
-    <article class="level max"><h3>MAX · Premium</h3><p>Livello Premium previsto per il futuro. Al momento l’abbonamento non è disponibile.</p></article>
+    <article class="level base"><h3>BASE · Gratuito</h3><p>Protezione gratuita con filtri locali, controllo antispam online, liste personali, notifiche e silenziamento con eccezioni. Le chiamate bloccate vengono rifiutate. Include banner pubblicitari.</p></article>
+    <article class="level max"><h3>MAX · Premium</h3><p>Abbonamento senza banner con controllo antispam rinforzato dalla consultazione di più database, gestione delle chiamate bloccate, Dual SIM, filtri numerici e backup.</p></article>
   </div>
   
 </section>
 <section class="section" id="opzioni">
-  <div class="section-head"><span class="num">+</span><div><h2>Opzioni aggiuntive</h2><p>Attiva queste opzioni solo se corrispondono alle tue esigenze.</p></div></div>
-  <div class="options">
-    <article class="option"><h3>Blocca numeri nascosti</h3><p>Riguarda le chiamate che non mostrano il numero del chiamante. Attivala solo se desideri bloccare anche questo tipo di chiamate.</p></article>
-    <article class="option"><h3>Blocca numeri stranieri</h3><p>Può bloccare chiamate provenienti da numeri esteri, comprese chiamate legittime. I contatti riconosciuti in rubrica hanno precedenza su questo filtro.</p></article>
-  </div>
-  <p><b>Blocca call center e spam</b> abilita il controllo antispam esterno. Disattivandolo, gli altri filtri locali restano validi. <b>Blocca numeri non in rubrica</b> riguarda le chiamate di numeri non riconosciuti fra i contatti.</p><p>Le opzioni contrassegnate dalla corona, come Gestione chiamate, Filtri numerici e Backup, sono riservate a MAX e non sono utilizzabili nella BASE pubblicata. BASE rifiuta le chiamate bloccate.</p>
+  <h2>Filtri e controllo antispam</h2>
+  <p>Nella Home, sotto <b>Impostazioni di blocco</b>, puoi scegliere quali filtri attivare in BASE e MAX.</p>
+  <ul>
+    <li><b>Blocca call center e spam</b> attiva il controllo online per i numeri che arrivano alla verifica antispam. In BASE il controllo usa un database antispam. In MAX il controllo può consultare più database antispam. Se il controllo online non è disponibile, la chiamata può passare. I filtri locali continuano a funzionare.</li>
+    <li><b>Blocca numeri nascosti</b> riguarda le chiamate che non mostrano il numero del chiamante.</li>
+    <li><b>Blocca numeri stranieri</b> riguarda i numeri presentati con un prefisso internazionale diverso da +39. Può bloccare anche chiamate legittime. Con Dual SIM disattivato, il numero può entrare nei Bloccati. Se disattivi il filtro e vuoi ricevere ancora chiamate da quel numero, controlla anche la lista <b>Numeri bloccati</b>.</li>
+    <li><b>Blocca numeri non in rubrica</b> riguarda i numeri che MisterCall può verificare come assenti dalla rubrica accessibile.</li>
+  </ul>
+  <p>Contatti presenti in rubrica e numeri nei <b>Sicuri</b> non verranno bloccati. Se hai attivato <b>Autorizza contatti in orari stabiliti</b>, anche una chiamata consentita può essere silenziata.</p>
+</section>
+<section class="section" id="orari">
+  <h2>Silenziamento e contatti autorizzati</h2>
+  <p>In BASE e MAX, nella Home attiva <b>Autorizza contatti in orari stabiliti</b> per silenziare le chiamate che passano i filtri, con le eccezioni che scegli.</p>
+  <ol>
+    <li>Tocca <b>Aggiungi numero dalla rubrica</b> e scegli ogni numero che vuoi lasciar squillare.</li>
+    <li>Attiva <b>Usa una fascia oraria</b> e imposta <b>Dalle</b> e <b>Alle</b>. Puoi impostare una fascia che attraversa la mezzanotte, ad esempio dalle 22:00 alle 07:00. Se lasci la fascia disattivata, il silenziamento vale a ogni ora.</li>
+    <li>Tocca <b>Salva</b>. In seguito usa <b>Modifica contatti e orari</b> oppure spegni l’interruttore per interrompere il silenziamento.</li>
+  </ol>
+  <p>Durante la fascia, se l’elenco delle eccezioni è vuoto vengono silenziate tutte le chiamate che passano i filtri.</p>
 </section>
 <section class="section" id="bloccati">
   <div class="section-head"><span class="num">≡</span><div><h2>Consultare i numeri bloccati</h2><p>Consulta le chiamate bloccate e registrate nell’app.</p></div></div>
   <p>Apri <b>Numeri bloccati</b> dalla Home per vedere un unico elenco dei numeri inseriti manualmente e di quelli registrati dai blocchi automatici. Le voci con data sono ordinate dalla più recente. Le voci storiche prive di data possono non mostrarla.</p>
-<p>Puoi digitare o incollare un numero. Nella nuova versione senza accesso diretto al registro puoi anche usare <b>Apri registro chiamate</b>: nell'app Telefono apri Recenti e condividi il numero con MisterCall, oppure copialo e torna nell'app per incollarlo.</p>
+<p>Per aggiungere un numero, seleziona il prefisso se necessario, digita o incolla il numero, tocca <b>BLOCCA</b> e conferma. Puoi anche usare <b>Apri registro chiamate</b>: nell'app Telefono apri Recenti e condividi il numero con MisterCall, oppure copialo e torna nell'app per incollarlo.</p>
 <ol><li>Nell'app Telefono seleziona una chiamata e scegli <b>Condividi</b>, se disponibile.</li><li>Scegli <b>MisterCall</b> (la voce può essere “Blocca con MisterCall”).</li><li>Controlla il numero proposto, selezionalo se ne sono presenti diversi e premi <b>CONFERMA BLOCCO</b>.</li></ol>
 <p>Aprire la schermata non blocca automaticamente il numero: <b>CHIUDI</b> o Indietro annullano l'operazione. La condivisione e il menu di selezione del testo dipendono dall'app utilizzata; se non sono supportati, usa copia/incolla o l'inserimento manuale. MisterCall non legge direttamente il registro. Se il numero è nei Sicuri, viene mostrato un avviso prima del suo spostamento nei Bloccati. I contatti riconosciuti in rubrica mantengono la precedenza sui blocchi.</p>
 <p>Con <b>SBLOCCA</b> rimuovi un numero dai Bloccati e lo aggiungi ai Sicuri.</p>
@@ -117,31 +135,54 @@ footer{text-align:center;color:var(--muted);padding:24px 20px 40px;font-size:.86
 </section>
 <section class="section" id="sicuri">
 <div class="section-head"><span class="num">✓</span><div><h2>Numeri sicuri</h2><p>Gestisci le scelte personali sui numeri.</p></div></div>
-<p>Apri <b>Numeri sicuri</b> dalla Home. Non è previsto l’inserimento manuale in questa schermata: un numero entra nei Sicuri quando lo sblocchi dai Bloccati o quando rispondi NO alla domanda sulla chiamata indesiderata.</p>
+<p>Apri <b>Numeri sicuri</b> dalla Home. Per aggiungere un numero, seleziona il prefisso se necessario, digita o incolla il numero, tocca <b>AGGIUNGI AI SICURI</b> e conferma. Se il numero è già nei Bloccati, <b>SPOSTA QUI</b> lo trasferisce nei Sicuri. Un numero entra nei Sicuri anche quando lo sblocchi dai Bloccati o rispondi <b>NO</b> alla domanda sulla chiamata indesiderata.</p>
 <p>Con <b>BLOCCA</b> lo rimuovi dai Sicuri e lo aggiungi ai Bloccati. I contatti in rubrica vengono riconosciuti separatamente e non vengono aggiunti automaticamente a questa lista.</p>
-<div class="notice"><strong>Filtri generali</strong>Nella nuova versione, i numeri nei Sicuri hanno precedenza sui filtri successivi, incluso quello per i numeri stranieri. Nella versione 1.0.4 il filtro stranieri può invece essere valutato prima dei Sicuri. La rubrica viene riconosciuta separatamente.</div>
 </section>
 <section class="section" id="notifiche-app">
-<div class="section-head"><span class="num">N</span><div><h2>Notifiche e domanda dopo la chiamata</h2><p>Le impostazioni delle notifiche sono disponibili in BASE.</p></div></div>
-<p>In <b>Avanzate</b> puoi attivare o disattivare separatamente le notifiche per le chiamate bloccate e quelle per un nuovo numero. Disattivare una notifica non disattiva la protezione.</p>
+<div class="section-head"><span class="num">N</span><div><h2>Notifiche e domanda dopo la chiamata</h2><p>Le impostazioni delle notifiche sono disponibili in BASE e MAX.</p></div></div>
+<p>In <b>Avanzate</b> puoi attivare o disattivare separatamente le notifiche per i nuovi numeri bloccati e quelle per un nuovo numero. Disattivare una notifica non disattiva la protezione.</p>
 <p>Dopo una chiamata consentita da un numero sconosciuto, la notifica può aprire la schermata <b>“CHIAMATA INDESIDERATA?”</b>: scegli <b>SÌ</b> per bloccare il numero oppure <b>NO</b> per considerarlo sicuro. Non viene proposta per ogni chiamata: contatti, numeri già nelle liste e numeri già valutati sono esclusi. La funzione richiede Android 12 o successivo e i permessi necessari.</p>
 <p>Se ignori la notifica senza scegliere SÌ o NO, il numero non viene considerato valutato e la domanda può ricomparire dopo una successiva chiamata.</p>
 </section>
 <section class="section" id="pubblicita">
 <div class="section-head"><span class="num">P</span><div><h2>Pubblicità e preferenze privacy</h2><p>Il consenso pubblicitario è separato dai permessi Android.</p></div></div>
-<p>La nuova versione BASE prevede banner nella Home, in Avanzate, in Numeri sicuri, in Numeri bloccati e nella schermata di valutazione aperta dalla notifica dopo una chiamata. I banner hanno uno spazio dedicato, separato dai pulsanti.</p>
+<p>In BASE possono comparire banner nella Home, in Avanzate, in Numeri sicuri, in Numeri bloccati e nella schermata di valutazione aperta dalla notifica dopo una chiamata. I banner hanno uno spazio dedicato, separato dai pulsanti.</p>
 <p>Quando richiesto, il modulo Google permette di scegliere le preferenze sul trattamento dei dati pubblicitari. La protezione telefonica non dipende dall’accettazione del consenso pubblicitario. In base alle scelte e alla disponibilità, possono comparire annunci limitati oppure nessun annuncio.</p>
 <p>Per rivedere le scelte, apri <b>Avanzate → Privacy pubblicità</b>, quando la voce è disponibile. In assenza di rete i banner possono non caricarsi; il controllo antispam esterno richiede invece una connessione.</p>
 <p>Consulta l’<a href="../">informativa privacy</a> per i dettagli sui dati trattati, sui servizi esterni e sulle richieste inviate dal modulo Contatti.</p>
 </section>
 <section class="section" id="max">
-  <div class="section-head"><span class="num">★</span><div><h2>Livello MAX Premium</h2><p>La funzione Premium non è ancora disponibile.</p></div></div>
-  <p>MAX è previsto come funzione Premium. Nella versione attuale l’abbonamento non è ancora disponibile.</p>
-  <div class="notice">Se compare un messaggio che informa che la funzione sarà disponibile in futuro, seleziona <b>BASE</b> per utilizzare la protezione gratuita.</div>
+  <h2>MAX e abbonamento</h2>
+  <p>Dalla Home, tocca <b>MAX</b> per vedere i piani mensile e annuale. In Italia, gli account idonei possono vedere <b>Inizia 7 giorni gratis</b> sul piano annuale. Prima di confermare, controlla nel riepilogo di Google Play il prezzo, la data del primo addebito e le condizioni di rinnovo.</p>
+  <p>Per annullare il rinnovo, apri <b>Avanzate → Gestisci abbonamento</b> oppure la sezione <b>Abbonamenti</b> di Google Play. Dopo una reinstallazione o un cambio di telefono, usa <b>Ripristina acquisti</b> dalla schermata MAX con lo stesso account Google Play dell’acquisto. Per trasferire liste e impostazioni usa <a href="#backup">Backup e ripristino</a>.</p>
+</section>
+<section class="section" id="gestione">
+  <h2>Gestione delle chiamate bloccate · MAX</h2>
+  <p>Apri <b>Avanzate → Gestione chiamate</b> e scegli come gestire le chiamate bloccate.</p>
+  <ul>
+    <li><b>Rifiuta chiamata</b> equivale a premere Rifiuta nell’app Telefono.</li>
+    <li><b>Blocca in silenzio</b> toglie la suoneria alla chiamata bloccata. Per vedere l’avviso a schermo, abilita MisterCall in <b>Mostra sopra altre app</b> quando Android apre le impostazioni. L’avviso scompare al termine della chiamata o toccando <b>HO CAPITO</b>. Il silenziamento funziona anche senza il permesso per mostrare l’avviso.</li>
+  </ul>
+</section>
+<section class="section" id="dualsim">
+  <h2>Dual SIM · MAX</h2>
+  <p>Su Android 11 o successivo, con due SIM attive, apri <b>Avanzate → Dualsim</b> e attiva <b>Attiva Dualsim</b>. Abbina le rubriche <b>Personale</b> e <b>Lavoro</b> alle linee e tocca <b>SALVA</b>. Se i nomi delle SIM sono uguali o assenti, usa <b>VERIFICA SIM NELLE IMPOSTAZIONI</b> per identificarle.</p>
+  <p>Torna alla Home e usa <b>Filtri per linea</b> per gestire per ogni SIM il blocco dei numeri nascosti, stranieri e non in rubrica. La verifica dei contatti usa la rubrica associata alla linea. Se quella rubrica non è accessibile, il blocco dei numeri non in rubrica è disabilitato per la SIM interessata.</p>
+</section>
+<section class="section" id="filtri">
+  <h2>Filtri numerici · MAX</h2>
+  <p>Apri <b>Avanzate → Filtri numerici</b>. Tocca <b>AGGIUNGI FILTRO</b>, scegli <b>Inizia con</b>, <b>Contiene</b> o <b>Finisce con</b>, inserisci le cifre e salva. Puoi attivare, modificare o eliminare le regole singolarmente. Per i numeri italiani le regole sulle cifre ignorano +39 e 0039. Per gli altri includono il prefisso del Paese.</p>
+  <p>In <b>Prefissi internazionali</b> puoi bloccare i prefissi selezionati o bloccare tutti i prefissi tranne quelli selezionati. Disattiva <b>Blocca numeri stranieri</b> per personalizzare i prefissi. Puoi anche aggiungere un Paese o un’area. I numeri senza + o 00 vengono trattati come italiani. Se scegli <b>Blocca tutti i prefissi tranne…</b> e lasci la lista vuota, il filtro blocca tutti i numeri, salvo contatti riconosciuti e Sicuri.</p>
+  <p>Usa <b>PROVA UN NUMERO</b> per controllare le regole numeriche e il blocco dei numeri stranieri. L’esito di una chiamata reale dipende anche da rubrica, liste personali e altri filtri. Una regola numerica non aggiunge da sola il numero ai Bloccati.</p>
+</section>
+<section class="section" id="backup">
+  <h2>Backup e ripristino · MAX</h2>
+  <p>Apri <b>Avanzate → Backup e ripristino</b>. Con <b>Esegui backup</b> scegli dove salvare il file. Include le liste Bloccati e Sicuri con le date disponibili, le opzioni di blocco e notifica, la modalità di gestione delle chiamate, i filtri numerici e le impostazioni Dual SIM. Conserva il file in un posto sicuro perché contiene i numeri delle tue liste.</p>
+  <p>Per importarlo, tocca <b>Ripristina backup</b>, scegli il file e conferma <b>Ripristina tutto</b>. Il ripristino sostituisce le liste e le impostazioni coperte dal backup. Se importi un backup precedente privo di filtri numerici, le regole attuali vengono azzerate. Sul nuovo telefono configura di nuovo i permessi Android, il livello di protezione e gli orari di silenziamento con le relative eccezioni.</p>
 </section>
 <section class="section" id="assistenza">
   <div class="section-head"><span class="num">?</span><div><h2>Problemi frequenti</h2><p>Controlli semplici prima di chiedere assistenza.</p></div></div>
-  <details open><summary>MisterCall non blocca una chiamata</summary><ul><li>Verifica che sia selezionato BASE e non OFF.</li><li>Completa la configurazione iniziale.</li><li>Controlla l’impostazione ID chiamante e spam.</li><li>Non tutte le chiamate vengono necessariamente riconosciute.</li></ul></details>
+  <details open><summary>MisterCall non blocca una chiamata</summary><ul><li>Verifica che sia selezionato BASE o MAX e controlla i filtri attivi.</li><li>Completa la configurazione iniziale.</li><li>Controlla l’impostazione ID chiamante e spam.</li><li>Controlla se il numero è in rubrica o nei Sicuri. Per il filtro antispam online verifica la connessione.</li></ul></details>
   <details><summary>Hai negato un permesso</summary><p>Apri le Impostazioni Android, seleziona <b>App &gt; MisterCall</b> e controlla le autorizzazioni disponibili.</p></details>
   <details><summary>Devi contattare l’assistenza</summary><p>Usa il modulo <b>Contatti</b> nell’app oppure scrivi a <a href="mailto:mistercallsupport@gmail.com">mistercallsupport@gmail.com</a>. Indica il modello del telefono e il problema riscontrato. Il modulo richiede email e messaggio, consente un nome facoltativo e aggiunge automaticamente la versione Android.</p></details>
 </section>
@@ -152,6 +193,6 @@ footer{text-align:center;color:var(--muted);padding:24px 20px 40px;font-size:.86
 </section>
 </main>
 </div>
-<footer><strong>MisterCall</strong> · Manuale utente · BASE · Guida aggiornata per la prossima release senza accesso al registro · 3 novembre 2026</footer>
+<footer><strong>MisterCall</strong> · Manuale utente · Versione 1.0.6 (build 12)</footer>
 </body>
 </html>
